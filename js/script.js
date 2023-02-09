@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // TITLE-PAGE LETTER-SYMBOLS ANIMATION
   let symbolItems = document.querySelectorAll(".symbol-item"),
-  globe=document.querySelector('.globe');
+  earth=document.querySelector('.earth');
   let hideLetters = function () {
     symbolItems.forEach((item, i) => {
       if (i % 2 === 0) {
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
       } while (i === symbolItems.length);
     }, delay);
     setTimeout(function(){
-      globe.classList.remove('globe-slide-top');
+      earth.classList.remove('earth-slide-top');
     },3000); 
   };
   hideLetters();
