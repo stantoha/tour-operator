@@ -350,24 +350,24 @@ header{
      transform-origin: center;
      transition: all 1s ease-in-out;
  }
- .globe{
+ .earth{
     position: relative;
     opacity: 0.7;
     transform: translateY(0%);
     transition: all 3s ease-in-out;
  }
 
- .globe.globe-slide-top{
+ .earth.earth-slide-top{
     opacity: 0;
     transform: translateY(500%);
 }
- .globe img {
+ .earth img {
     position: absolute;
     transform:scale(0.6) rotate(0deg);
     margin: 0px;
   }
 .earth-rotate{
-animation: earth-rotate 120s linear infinite ;
+animation: earth-rotate 60s linear infinite ;
 }
 
 @keyframes earth-rotate{
@@ -422,7 +422,7 @@ animation: earth-rotate 120s linear infinite ;
     .represent-title {
         top: 250px;
      }
-     .globe{
+     .earth{
         transform: scale(1.5);
      }
      p.slogan{
