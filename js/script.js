@@ -1,10 +1,17 @@
+
+var carousel = new bootstrap.Carousel((document.querySelector("#myCarousel")), {
+  interval: 5000,
+  wrap: false,
+});
+
+
 window.addEventListener("DOMContentLoaded", () => {
+
+
+
+
   //TITLE-PAGE CAROUSEL BG
-  var myCarousel = document.querySelector("#myCarousel");
-  var carousel = new bootstrap.Carousel(myCarousel, {
-    interval: 5000,
-    wrap: false,
-  });
+ 
 
   // TITLE-PAGE LETTER-SYMBOLS ANIMATION
   let symbolItems = document.querySelectorAll(".symbol-item"),
@@ -392,7 +399,7 @@ function showTourCard(target) {
         tourCardFlags.append(tourCardFlag);
       }      
 
-      let tourCardGallery=`<div id="tour-card-gallery-carousel" class="carousel slide" data-bs-ride="carousel">
+      let tourCardGallery=`<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="img/tours-info/${tourListLink.dataset.tourname}/0.jpg" class="d-block w-100" alt="...">
@@ -404,11 +411,11 @@ function showTourCard(target) {
           <img src="img/tours-info/${tourListLink.dataset.tourname}/2.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#tour-card-gallery-carousel" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#tour-card-gallery-carousel" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
