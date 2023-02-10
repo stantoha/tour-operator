@@ -58,7 +58,7 @@ body{
 header{
     width: 100%;
     position: fixed;
-    /* height: 70px; */
+    height: 70px;
     box-shadow: 0px 0px 0px 2px  rgba(255, 255, 255, 1);
     z-index: 100;
     transition: all 1s;
@@ -82,16 +82,31 @@ header{
 }
 
 /* HEADER-LOGO */
-.header-logo {
+.header-logo-link {
+    position: relative;
+    overflow:hidden;
     display: flex;
     align-items:center;
     justify-content: center;
+    text-align: center;
+    border-radius:50%;
+    box-shadow: 0px 0px 5px 2px  rgba(255, 255, 255, 1);
 }
 .header-logo-icon {
-    max-width: 30px;
-    height: 25px;    
+    transform-origin: center; 
 }
-
+.earth-rotate{
+    animation: earth-rotate 60s linear infinite ;
+    }
+    
+    @keyframes earth-rotate{
+        0%{
+            transform:rotate(0deg);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
 
 /*HEADER-TITLE */
 .header-title{
@@ -760,13 +775,11 @@ p.tour-card-title{
 .divider{
     display: block;
     position: relative;
-    height:10px;
+    height:5px;
     background-color:rgba(255, 255, 255, 1);
     margin: 30px auto 30px auto;
     width: 100%;
- /*   border-top:15px rgba(0, 0, 0, 0.5);
-   border-bottom:15px rgba(0, 0, 0, 0.5); */
-   box-shadow:0px 0px 7px 7px rgba(255, 255, 255, 0.8);
+   box-shadow:0px 0px 3px 3px rgba(255, 255, 255, 0.8);
 
 }
 
@@ -858,26 +871,17 @@ a.footer-logo-link{
     height: 80px;
     margin-bottom: 9px;
   }
-  a.header-logo-link{
-    position: relative;
-    box-shadow: 0px 0px 5px 1px rgba(217, 255, 255, 0.5),
-    0px 0px 6px 3px rgba(17, 155, 25, 0.5),
-    0px 0px 0px 2px rgba(255, 255, 255, 1);
-    transform: scale(3);
-    border-radius:50%;
-    transition: all 1s;
-    overflow: hidden;
-  }
+
 .logo-rotate{
   animation: logo-rotate 10s linear infinite ;
 }
 
 @keyframes logo-rotate{
     0%{
-        transform: scale(1.5) rotate(0deg);
+        transform: rotate(0deg);
     }
     100%{
-        transform: scale(1.5) rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
