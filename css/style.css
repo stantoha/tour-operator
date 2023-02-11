@@ -875,6 +875,11 @@ a.footer-logo-link{
     margin-bottom: 9px;
   }
 
+  @media screen and (min-width:768px){
+    .up-button{
+        right: 15%;
+      }
+  }
 .logo-rotate{
   animation: logo-rotate 10s linear infinite ;
 }
