@@ -102,10 +102,7 @@ showCollectionItem(mainContentTabs, 0);
 let header = document.querySelector("header"),
     headerHalfs = document.querySelectorAll(".header-half"),
     nav = document.querySelector(".nav"),
-    navToggler = document.getElementById("nav-toggle"),
-    upButton = document.querySelector(".up-button");
-
-    upButton.classList.add("hide");
+    navToggler = document.getElementById("nav-toggle");
 
 window.onscroll = function () {
   headerHalfs.forEach((item, i) => {
@@ -116,23 +113,19 @@ window.onscroll = function () {
         item.classList.add("header-half-slide-right");
       }
       header.classList.add("header-slide-top");
-      upButton.classList.remove("hide");
-      upButton.classList.add("show", "fade");
     } else {
       item.classList.remove("header-half-slide-left");
       item.classList.remove("header-half-slide-right");
       header.classList.remove("header-slide-top");
-      upButton.classList.add("hide");
-      upButton.classList.remove("show", "fade");
     }
   });
 
-  upButton.addEventListener("click", () => {
+ /*  upButton.addEventListener("click", () => {
     window.scrollTo(0, 0);
   });
   upButton.addEventListener("touchstart", () => {
     window.scrollTo(0, 0);
-  });
+  }); */
 };
 
 //SIGN-UP & LOGIN
@@ -402,13 +395,13 @@ function showTourCard(target) {
       let tourCardGallery=`<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/tours-info/${tourListLink.dataset.tourname}/0.jpg" class="d-block w-100" alt="...">
+          <img src="" class="d-block w-100" alt="#">
         </div>
         <div class="carousel-item">
-          <img src="img/tours-info/${tourListLink.dataset.tourname}/1.jpg" class="d-block w-100" alt="...">
+          <img src="" class="d-block w-100" alt="#">
         </div>
         <div class="carousel-item">
-          <img src="img/tours-info/${tourListLink.dataset.tourname}/2.jpg" class="d-block w-100" alt="...">
+          <img src="" class="d-block w-100" alt="#">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -751,6 +744,7 @@ function showTourCard(target) {
 toursListSection.addEventListener("click", (event) => {
   let target = event.target;
   showTourCard(target);
+  toursFiltersList.classList.add('hide');
 });
 
 //COUNTRIES
