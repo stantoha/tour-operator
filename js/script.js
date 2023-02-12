@@ -129,7 +129,7 @@ window.onscroll = function () {
 };
 
 //SIGN-UP & LOGIN
-let headerLogin = document.querySelector(".header-login"),
+/* let headerLogin = document.querySelector(".header-login"),
     signUpBtn = document.querySelector(".sign-up-btn"),
     loginBtn = document.querySelector(".login-btn"),
     modalValidation = document.querySelector(".modal-validation"),
@@ -150,7 +150,7 @@ headerLogin.addEventListener("click", (event) => {
 });
 headerLogin.addEventListener("touchstart", (event) => {
   showModal(event,signUpBtn,loginBtn,modalValidation,modalLogin);
-});
+}); */
 
 
 //NAV & MENU & BURGER 
