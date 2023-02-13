@@ -1,8 +1,7 @@
-
-var carousel = new bootstrap.Carousel((document.querySelector("#myCarousel")), {
+/* var carousel = new bootstrap.Carousel((document.querySelector("#myCarousel")), {
   interval: 5000,
   wrap: false,
-});
+}); */
 
 
 window.addEventListener("DOMContentLoaded", () => {
