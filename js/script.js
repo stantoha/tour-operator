@@ -417,8 +417,7 @@ function showTourCard(target) {
 
       let tourCard = document.createElement("div");
       tourCard.classList.add("tour-card", "container", "fade");
-      tourCard.innerHTML = `
-      <div class="tour-card-content row flex-wrap mt-3 text-white">
+      tourCard.innerHTML = `<div class="tour-card-content row flex-wrap mt-3 text-white">
       <div class="divider"></div>
       <div class="tour-card-name col-12 col-md-8 col-lg-8 mx-lg-auto mx-md-auto">
           <div class="container-fluid">
@@ -438,9 +437,7 @@ function showTourCard(target) {
 
         <div class="col-12">
         <div class="wrapper-man wrapper-man-move d-flex justify-content-start">
-
                   <div class="man man-move d-flex flex-column justify-content-center position-relative mb-4">
-            
                     <div class="headandshoulders d-flex flex-column align-items-center position-relative ">
                       <div class="head head-move">
                         <div class="part"></div>
@@ -456,7 +453,6 @@ function showTourCard(target) {
                         <div class="h-part"></div>
                       </div>
                     </div>
-            
                     <div class="handsandbody d-flex align-items-center justify-content-between position-relative">
                       <div class="hand right-move">
                         <div class="col">
@@ -475,7 +471,6 @@ function showTourCard(target) {
                             <div class="part"></div>
                           </div>
                         </div>
-                        
                       </div>
                       <div class="divader"></div>
                       <div class="manbody body-move">
@@ -518,7 +513,6 @@ function showTourCard(target) {
                             <div class="part"></div>
                           </div>
                         </div>
-                        
                       </div>
                     </div>
             
@@ -574,6 +568,35 @@ function showTourCard(target) {
                 </div>
         </div>
 
+     <div class="tour-card-map col-12 p-3 p-md-4 p-lg-5">
+        <div class="tour-card-info-block mb-5 col-slide col-slide-right">
+          <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
+            Route:
+          </p>
+          <div class="info-list d-flex justify-content-center  p-1 m-0">
+            <div class="info-item p-1">
+                <a href="#" class="fs-3 info-link  text-white text-decoration-none mx-auto">
+                  city
+                </a>
+              </div>
+              <div class="info-item p-1">
+                <a href="#" class="fs-3 info-link text-white text-decoration-none">
+                  city
+                </a>
+              </div>
+              <div class="info-item p-1">
+                <a href="#" class="fs-3 info-link  text-white text-decoration-none mx-auto">
+                  city
+                </a>
+              </div>
+              <div class="info-item p-1">
+                <a href="#" class="fs-3 info-link text-white text-decoration-none">
+                  city
+                </a>
+              </div>
+            </div>
+        </div>
+      </div>
 
                
       <div class="tour-card-map col-12 p-3 p-md-4 p-lg-5">
