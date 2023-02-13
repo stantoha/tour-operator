@@ -819,7 +819,9 @@ p.tour-card-title{
   }
 
 
-
+.footer{
+    position: relative;
+}
 .socials{
 
 }
