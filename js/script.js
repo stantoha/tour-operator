@@ -500,11 +500,10 @@ function showTourCard(target) {
                          <div class="part ms-2"></div>
                          <div class="part ms-2"></div>
                          <div class="part ms-2"></div>
+                         <div class="part ms-2"></div>
                        </div>
                        <div class="hips d-flex justify-content-between hips-move">
-                         <div class="h-part"></div>
-                         <div class="divader"></div>
-                         <div class="h-part"></div>
+                        
                        </div>
                      </div>
                      <div class="divader"></div>
@@ -1229,9 +1228,7 @@ function getCountryInfo(i) {
     "row",
     "d-flex",
     "flex-wrap",
-    "justify-content-around",
-    "mb-3",
-    "p-lg-3"
+    "justify-content-around"
   );
   countryInfoBlock.innerHTML = `<div class="country-name col-slide col-slide-right col-11 shadow-lg  text-center  my-3 ">
         <img src="${country.countryBG}" class="card-img" alt="${country.name}">
@@ -1243,66 +1240,81 @@ function getCountryInfo(i) {
     <div class="country-info-block-item col-slide col-slide-right col-12 d-md-none d-lg-none my-2 shadow-lg text-center mb-3">
       <img class="country-flag  shadow-lg my-3" src="${country.flag}" style="max-width:260px;height:auto;"  alt="${country.name}">
     </div>
-    <div class="country-info-block-item col-slide col-slide-right col-12 col-md-5 col-lg-5 p-2 my-2 mb-3">
-      <div class="short-history ">
-           <div class="short-history-title text-white mx-auto my-4 p-1 pt-2 bg-secondary text-capitalize col-12 border-bottom border-1">
-                <p class="h3 block-title p-2 te2 pt-3t-center ">
-                History in brief
+    <div class="country-info-block-item col-slide col-slide-right col-12 col-md-5 col-lg-5 p-3 m-0 my-3">
+      <div class="short-history d-flex flex-row flex-wrap justify-content-around">
+                <p class="h3 block-title mb-3 p-2 text-center border-bottom border-1">
+                   History in brief
                 </p>
-            </div>
         <p class="fs-5 short-history-text p-1 text-justify">${country.history}</p>
       </div>
     </div>
-      <div class="country-info-block-item col-slide col-slide-left col-12 col-md-5 col-lg-5 p-2  my-2 mb-3">
-        <div class="country-basic-info-list p-1">
-            <div class="country-basic-info-title text-white mx-auto my-4 p-1 pt-2 bg-secondary text-capitalize col-12 border-bottom border-1">
-                <p class="h3 block-title p-2 te2 pt-3t-center ">
-                Basic Info
+      <div class="country-info-block-item col-slide col-slide-left col-12 col-md-5 col-lg-5 p-3  -02 yb-3">
+        <div class="country-basic-info-list d-flex flex-row flex-wrap justify-content-around">
+               <p class="h3 block-title mb-3 p-2 text-center border-bottom border-1">
+                  Basic info
                 </p>
-            </div>
-            <div class="country-basic-info-item">
-            <p class="fs-5  population">Population: <small class="text-white">${country.population}</small></p>
-            </div>
-            <div class="country-basic-info-item">
-              <p class="fs-5  language">Language: <small class="text-white">${country.language}</small></p>
-            </div>
-            <div class="country-basic-info-item">
-              <p class="fs-5  main-cities">Main cities: <small class="text-white">${country.city}</small></p>
-            </div>
-            <div class="country-basic-info-item">
-              <p class="fs-5  well-known">Well-known people: <small class="text-white">${country.wellKnown}</small></p>
-            </div>
-            <div class="country-basic-info-item">
-              <p class="fs-5  currency">Currency: <small class="text-white">${country.currency}</small></p>
-            </div>
+                <table >
+                  <tr>
+                    <th>
+                         <p class="fs-5  population">Population: </p>
+                    </th>
+                     <td>
+                       <p class="fs-5 italic text-white">${country.population}</p>
+                    </td>
+                  </tr>
+                  <tr>
+                  <th>
+                          <p class="fs-5  language">Language: </p>
+                    </th>
+                    <td>
+                      <p class="fs-5 italic text-white">${country.language}</p>
+                    </td></tr>
+                  <tr>
+                  <th>
+                         <p class="fs-5  main-cities">Main cities: </p>
+                    </th>
+                     <td>
+                       <p class="fs-5 italic text-white">${country.city}</p>
+                    </td></tr>
+                  <tr>
+                  <th>
+                         <p class="fs-5  currency">Currency: </p>
+                    </th>
+                      <td>
+                      <p class="fs-5 italic text-white">${country.currency}</p>
+                    </td></tr>
+                  <tr>
+                   <th>
+                         <p class="fs-5  well-known">Well-known people: </p>
+                    </th>
+                    <td>
+                      <p class="fs-5 italic text-white">${country.wellKnown}</p>
+                    </td></tr>  
+                 
+                </table>
+
           </div>
       </div>
     
-    <div class="country-info-block-item col-12 col-md-11 col-lg-5 p-2  my-2 mb-3">
+    <div class="country-info-block-item col-12 col-md-11 col-lg-5 p-3  -02 yb-3">
     <div class="places-of-interest-list  d-flex flex-row flex-wrap justify-content-around">
-            <div class="places-of-interest-title text-white m-0 my-4 p-1 pt-2 bg-secondary text-capitalize col-12 border-bottom border-1">
-                <p class="h3 block-title p-2 te2 pt-3t-center ">
-                Places Of Interest:
+               <p class="h3 block-title mb-3 p-2 text-center border-bottom border-1">
+                  Places of interest:
                 </p>
-            </div>
     </div>
     </div>
-    <div class="country-info-block-item col-12 col-md-11 col-lg-5 p-2  my-2 mb-3">
+    <div class="country-info-block-item col-12 col-md-11 col-lg-5 p-3  -02 yb-3">
     <div class="souvenirs-list  d-flex flex-row flex-wrap justify-content-around">
-           <div class="souvenir-title text-white m-0 my-4 p-1 pt-2 bg-secondary text-capitalize col-12 border-bottom border-1">
-                <p class="h3 block-title  p-2 t2 pt-3xt-center ">
-                Souvenirs:
+                <p class="h3 block-title mb-3 p-2 text-center border-bottom border-1">
+                  Souvenirs:
                 </p>
-            </div>
     </div>
     </div>
-    <div class="country-info-block-item col-12 col-md-11 my-2">
+    <div class="country-info-block-item col-12 col-md-11 my-2 mb-3">
     <div class="country-tours-list row flex-wrap justify-content-around ">
-           <div class="country-tour-title text-white m-0 my-4 p-1 pt-2 bg-secondary text-capitalize col-12 border-bottom border-1">
-                <p class="h3 block-title p-2  t2 pt-3xt-center ">
-                country-tours:
+               <p class="h3 block-title mb-3 p-2 text-center border-bottom border-1">
+                  Country-tours:
                 </p>
-            </div>
     </div>
     </div>
     </div>
@@ -1315,8 +1327,8 @@ function getCountryInfo(i) {
     for (let j = 0; j < num[0]; j++) {
       let infoBlock = document.createElement("div");
       infoBlock.classList.add("mb-3");
-      infoBlock.innerHTML = `<div class="card bg-dark content p-2  h-100">
-        <img src="${num[1][j][1]}" class="card-img mx-auto" style="max-width:320px;height:auto;" alt="#">
+      infoBlock.innerHTML = `<div class="card bg-dark content shadow-lg h-100">
+        <img src="${num[1][j][1]}" class="card-img p-2 mx-auto w-100"  alt="#">
         <p class="card-text lh-2 my-3 fs-5 p-2">
             ${num[1][j][0]}
         </p>
@@ -1372,7 +1384,7 @@ function getCountryInfo(i) {
   }
   getCountryTours();
 }
-selectCountryInfo.addEventListener("click", (event) => {
+/* selectCountryInfo.addEventListener("click", (event) => {
   let target = event.target;
   countryInfo.innerHTML = "";
   console.log(target.selectedIndex);
@@ -1384,7 +1396,7 @@ selectCountryInfo.addEventListener("touchstart", (event) => {
   console.log(target.selectedIndex);
   getCountryInfo(target.selectedIndex);
 });
-getCountryInfo(0);
+getCountryInfo(0); */
 
 countriesList.addEventListener("click", (event) => {
   let target = event.target;
