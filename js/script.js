@@ -369,6 +369,7 @@ let toursList = document.querySelector(".tours-list"),
 function showTourCard(target) {
   tourListLinks.forEach((tourListLink, i) => {
     if (target == tourListLink) {
+   
       let tourFlags = tourListItems[i].querySelectorAll(
         ".tour-country-flags-flag"
       );
@@ -390,13 +391,13 @@ function showTourCard(target) {
       let tourCardGallery = `<div id="tour-carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/tours-info/${tourListLink.dataset.tourname}/--0.png" class="d-block w-100" alt="#">
+          <img src="img/tours-info/${tourListLink.dataset.tourname}/0.png" class="d-block w-100" alt="#">
         </div>
         <div class="carousel-item">
-          <img src="img/tours-info/${tourListLink.dataset.tourname}/--1.png" class="d-block w-100" alt="#">
+          <img src="img/tours-info/${tourListLink.dataset.tourname}/1.png" class="d-block w-100" alt="#">
         </div>
         <div class="carousel-item">
-          <img src="img/tours-info/${tourListLink.dataset.tourname}/--2.png" class="d-block w-100" alt="#">
+          <img src="img/tours-info/${tourListLink.dataset.tourname}/2.png" class="d-block w-100" alt="#">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#tour-carousel" data-bs-slide="prev">
@@ -627,7 +628,7 @@ function showTourCard(target) {
           <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
             Tour description
           </p>
-          <p class="card-text mb-3 p-2">
+          <p class="card-text mb-3 p-2 fs-3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae atque hic eaque natus? Officiis porro illo minima animi! Fugiat quia illum numquam qui et possimus obcaecati, molestias quam doloremque nostrum!
           </p>
         </div>
@@ -720,9 +721,9 @@ function showTourCard(target) {
      <div class="divider"></div>
 
       <div class="tour-card-program col-12 ">
-        <div class="tour-program-title bg-info my-3 p-1 text-uppercase">
-          <p class="block-title p-2 text-center">
-          Tour program
+        <div class="tour-program-title bg-info my-3  text-uppercase">
+        <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
+        Tour program
           </p>
         </div>
         
@@ -734,11 +735,12 @@ function showTourCard(target) {
       </div>
       <div class="divider"></div>
       <div class="tour-card-included col-12 col-md-6 col-lg-4 my-3 py-3 text-white">
-        <div class="included-title bg-success m-0 p-1 text-uppercase">
-          <p class="block-title p-2 text-center">
-            Included:
-          </p>
-        </div>
+      <div class="included-title bg-success my-3  text-uppercase">
+        <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
+         Included:
+        </p>
+      </div>
+        
         <ul class="px-lg-5 py-2">
           <li class="included-item fs-6 p-1">
             ${tourListLink.dataset.duration} nights in hotels 3*;
@@ -759,11 +761,11 @@ function showTourCard(target) {
       </div>
    
       <div class="tour-card-notincluded col-12 col-md-6 col-lg-4 my-3 py-3 text-white">
-        <div class="not-included-title bg-danger m-0 p-1 text-uppercase">
-          <p class="block-title p-2 text-center ">
-            Not included:
-          </p>
-        </div>
+      <div class="not-included-title bg-danger my-3  text-uppercase">
+        <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
+        Not included:
+        </p>
+      </div>
         <ul class="px-lg-5 py-2">
           <li class="not-included-item fs-6 p-1">
             Transit to Lviv;
@@ -784,17 +786,17 @@ function showTourCard(target) {
       </div>
    
       <div class="tour-card-additional col-12 col-md-6 col-lg-4  my-3 py-3 text-white m-auto">
-        <div class="additional-info-title m-0 p-1 bg-secondary text-uppercase">
-          <p class="block-title p-2 text-center">
-            Additional info
-          </p>
-        </div>
+      <div class="additional-info-title bg-warning my-3  text-uppercase">
+        <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
+           Additional info
+        </p>
+      </div>
         <ul class="px-lg-5 py-2">
-          <li class="children-discount fs-6 p-1">
+          <li class="children-discount fs-5 p-1">
             Discount for children under 12, travelling with 2
             adults-30euro;
           </li>
-          <li class="join-group fs-6 p-1">
+          <li class="join-group fs-5 p-1">
             It is possible to join group along the route:
           </li>
         </ul>
