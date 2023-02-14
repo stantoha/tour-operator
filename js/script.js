@@ -443,8 +443,8 @@ function showTourCard(target) {
                        <div class="part"></div>
                      </div>
                      <div class="neck neck-move">
-                       <div class="part"></div>
-                       
+                       <div class="part">
+                       </div>
                      </div>
                      <div
                        class="shoulders d-flex justify-content-between shoulders-move"
@@ -1237,7 +1237,7 @@ function getCountryInfo(i) {
          <img class="country-flag d-none d-md-block d-lg-block shadow-lg  mx-auto" src="${country.flag}" style="width:180px;height:auto;" alt="${country.name}">
       </div>
     </div>
-    <div class="country-info-block-item col-slide col-slide-right col-12 d-md-none d-lg-none my-2 shadow-lg text-center mb-3">
+    <div class="country-info-block-item col-slide col-slide-right col-12 d-md-none d-lg-none my-2 shadow-lg mb-3">
       <img class="country-flag  shadow-lg my-3" src="${country.flag}" style="max-width:260px;height:auto;"  alt="${country.name}">
     </div>
     <div class="country-info-block-item col-slide col-slide-right col-12 col-md-5 col-lg-5 p-3 m-0 my-3">
@@ -1248,47 +1248,47 @@ function getCountryInfo(i) {
         <p class="fs-5 short-history-text p-1 text-justify">${country.history}</p>
       </div>
     </div>
-      <div class="country-info-block-item col-slide col-slide-left col-12 col-md-5 col-lg-5 p-3  -02 yb-3">
+      <div class="country-info-block-item col-slide col-slide-left col-12 col-md-5 col-lg-5 p-3  m-0 my-3">
         <div class="country-basic-info-list d-flex flex-row flex-wrap justify-content-around">
                <p class="h3 block-title mb-3 p-2 text-center border-bottom border-1">
                   Basic info
                 </p>
                 <table >
                   <tr>
-                    <th>
+                    <th class="px-3">
                          <p class="fs-5  population">Population: </p>
                     </th>
                      <td>
-                       <p class="fs-5 italic text-white">${country.population}</p>
+                       <p class="fs-5 fst-italic text-white">${country.population}</p>
                     </td>
                   </tr>
                   <tr>
-                  <th>
+                  <th class="px-3">
                           <p class="fs-5  language">Language: </p>
                     </th>
                     <td>
-                      <p class="fs-5 italic text-white">${country.language}</p>
+                      <p class="fs-5 fst-italic text-white">${country.language}</p>
                     </td></tr>
                   <tr>
-                  <th>
+                  <th class="px-3">
                          <p class="fs-5  main-cities">Main cities: </p>
                     </th>
                      <td>
-                       <p class="fs-5 italic text-white">${country.city}</p>
+                       <p class="fs-5 fst-italic text-white">${country.city}</p>
                     </td></tr>
                   <tr>
-                  <th>
+                  <th class="px-3">
                          <p class="fs-5  currency">Currency: </p>
                     </th>
                       <td>
-                      <p class="fs-5 italic text-white">${country.currency}</p>
+                      <p class="fs-5 fst-italic text-white">${country.currency}</p>
                     </td></tr>
                   <tr>
-                   <th>
+                   <th class="px-3">
                          <p class="fs-5  well-known">Well-known people: </p>
                     </th>
                     <td>
-                      <p class="fs-5 italic text-white">${country.wellKnown}</p>
+                      <p class="fs-5 fst-italic text-white">${country.wellKnown}</p>
                     </td></tr>  
                  
                 </table>
@@ -1329,7 +1329,7 @@ function getCountryInfo(i) {
       infoBlock.classList.add("mb-3");
       infoBlock.innerHTML = `<div class="card bg-dark content shadow-lg h-100">
         <img src="${num[1][j][1]}" class="card-img p-2 mx-auto w-100"  alt="#">
-        <p class="card-text lh-2 my-3 fs-5 p-2">
+        <p class="card-text lh-1.8 my-3 fs-5 p-2">
             ${num[1][j][0]}
         </p>
       </div>`;
