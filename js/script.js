@@ -3,18 +3,12 @@
   wrap: false,
 }); */
 
-
 window.addEventListener("DOMContentLoaded", () => {
-
-
-
-
   //TITLE-PAGE CAROUSEL BG
- 
 
   // TITLE-PAGE LETTER-SYMBOLS ANIMATION
   let symbolItems = document.querySelectorAll(".symbol-item"),
-  earth=document.querySelector('.earth');
+    earth = document.querySelector(".earth");
   let hideLetters = function () {
     symbolItems.forEach((item, i) => {
       if (i % 2 === 0) {
@@ -39,13 +33,13 @@ window.addEventListener("DOMContentLoaded", () => {
         letTimer = setTimeout(timerLet, delay);
       } while (i === symbolItems.length);
     }, delay);
-    setTimeout(function(){
-      earth.classList.remove('earth-slide-top');
-    },3000); 
+    setTimeout(function () {
+      earth.classList.remove("earth-slide-top");
+    }, 3000);
   };
   hideLetters();
   showLetters();
-  
+
   //COL-SLIDE
   let colSlides = document.querySelectorAll(".col-slide");
   window.addEventListener("scroll", checkCols);
@@ -93,15 +87,15 @@ let showItem = function (item) {
 
 //START-PAGE
 let body = document.querySelector("body"),
-mainContentTabs = document.querySelectorAll(".main-content");
+  mainContentTabs = document.querySelectorAll(".main-content");
 hideAllCollectionItems(mainContentTabs);
 showCollectionItem(mainContentTabs, 0);
 
 //HEADER-HALFS & UP-BUTTON ONSCROLL
 let header = document.querySelector("header"),
-    headerHalfs = document.querySelectorAll(".header-half"),
-    nav = document.querySelector(".nav"),
-    navToggler = document.getElementById("nav-toggle");
+  headerHalfs = document.querySelectorAll(".header-half"),
+  nav = document.querySelector(".nav"),
+  navToggler = document.getElementById("nav-toggle");
 
 window.onscroll = function () {
   headerHalfs.forEach((item, i) => {
@@ -119,7 +113,7 @@ window.onscroll = function () {
     }
   });
 
- /*  upButton.addEventListener("click", () => {
+  /*  upButton.addEventListener("click", () => {
     window.scrollTo(0, 0);
   });
   upButton.addEventListener("touchstart", () => {
@@ -128,7 +122,7 @@ window.onscroll = function () {
 };
 
 //SIGN-UP & LOGIN
-/* let headerLogin = document.querySelector(".header-login"),
+let headerLogin = document.querySelector(".header-login"),
     signUpBtn = document.querySelector(".sign-up-btn"),
     loginBtn = document.querySelector(".login-btn"),
     modalValidation = document.querySelector(".modal-validation"),
@@ -149,17 +143,16 @@ headerLogin.addEventListener("click", (event) => {
 });
 headerLogin.addEventListener("touchstart", (event) => {
   showModal(event,signUpBtn,loginBtn,modalValidation,modalLogin);
-}); */
+});
 
-
-//NAV & MENU & BURGER 
+//NAV & MENU & BURGER
 let headerMenu = document.querySelector(".header-menu"),
-    burgerMenu = document.querySelector(".burger-menu"),
-    footerMenu = document.querySelector(".footer-menu"),
-    burgerMenuLinks = document.querySelectorAll(".burger-menu-link"),
-    headerMenuLinks = document.querySelectorAll(".header-menu-link"),
-    footerMenuLinks = document.querySelectorAll(".footer-menu-link");
-    
+  burgerMenu = document.querySelector(".burger-menu"),
+  footerMenu = document.querySelector(".footer-menu"),
+  burgerMenuLinks = document.querySelectorAll(".burger-menu-link"),
+  headerMenuLinks = document.querySelectorAll(".header-menu-link"),
+  footerMenuLinks = document.querySelectorAll(".footer-menu-link");
+
 let menuUse = function (arr, target) {
   arr.forEach((arrItem, i) => {
     arrItem.classList.remove("active");
@@ -231,7 +224,7 @@ groupTripBtn.addEventListener("touchstart", () => {
 
 //IND-TRIP-BTN ANIMATION
 const plane = document.querySelector(".plane"),
-      indTripBtn = document.getElementById("individual-trip-btn");
+  indTripBtn = document.getElementById("individual-trip-btn");
 
 indTripBtn.addEventListener("click", () => {
   plane.classList.add("plane-move");
@@ -243,20 +236,15 @@ indTripBtn.addEventListener("touchstart", () => {
 ////FILTER-TOURS
 
 let toursSection = document.querySelector(".tours-section"),
-
   toursListTitle = document.querySelector(".tours-list-country-title"),
-
   tourListItems = document.querySelectorAll(".tours-list-item"),
   tourListLinks = document.querySelectorAll(".tours-list-link"),
-
   toursFiltersList = document.querySelector(".tours-filters-list"),
   toursFilters = document.querySelectorAll(".tour-filter"),
-
   destinationSelect = document.getElementById("select-destination"),
   durationSelect = document.getElementById("select-duration"),
   typeSelect = document.getElementById("select-type"),
   priceRange = document.getElementById("priceRange"),
-
   destinations = document.querySelectorAll(".destination-item"),
   types = document.querySelectorAll(".tour-type"),
   durations = document.querySelectorAll(".duration-value");
@@ -381,26 +369,34 @@ let toursList = document.querySelector(".tours-list"),
 function showTourCard(target) {
   tourListLinks.forEach((tourListLink, i) => {
     if (target == tourListLink) {
-      let tourFlags=tourListItems[i].querySelectorAll('.tour-country-flags-flag');
-      let tourCardFlags=document.createElement('div');
-      for(let n=0;n<tourFlags.length;n++){
-        let tourCardFlag=document.createElement('div');
-        tourCardFlag.classList.add('tour-card-flag','m-1','border','border-1','shadow-lg');
-        tourCardFlag.innerHTML=`<a class="tour-card-flag-link" href="#">
+      let tourFlags = tourListItems[i].querySelectorAll(
+        ".tour-country-flags-flag"
+      );
+      let tourCardFlags = document.createElement("div");
+      for (let n = 0; n < tourFlags.length; n++) {
+        let tourCardFlag = document.createElement("div");
+        tourCardFlag.classList.add(
+          "tour-card-flag",
+          "m-1",
+          "border",
+          "border-1",
+          "shadow-lg"
+        );
+        tourCardFlag.innerHTML = `<a class="tour-card-flag-link" href="#">
         <img src=${tourFlags[n].currentSrc} class="p-1"></a>`;
         tourCardFlags.append(tourCardFlag);
-      }      
+      }
 
-      let tourCardGallery=`<div id="tour-carousel" class="carousel slide" data-bs-ride="carousel">
+      let tourCardGallery = `<div id="tour-carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="" class="d-block w-100" alt="#">
+          <img src="img/tours-info/${tourListLink.dataset.tourname}/--0.png" class="d-block w-100" alt="#">
         </div>
         <div class="carousel-item">
-          <img src="" class="d-block w-100" alt="#">
+          <img src="img/tours-info/${tourListLink.dataset.tourname}/--1.png" class="d-block w-100" alt="#">
         </div>
         <div class="carousel-item">
-          <img src="" class="d-block w-100" alt="#">
+          <img src="img/tours-info/${tourListLink.dataset.tourname}/--2.png" class="d-block w-100" alt="#">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#tour-carousel" data-bs-slide="prev">
@@ -434,138 +430,155 @@ function showTourCard(target) {
                  </div>
                </div>
 
-        <div class="col-12">
-        <div class="wrapper-man wrapper-man-move d-flex justify-content-start">
-                  <div class="man man-move d-flex flex-column justify-content-center position-relative mb-4">
-                    <div class="headandshoulders d-flex flex-column align-items-center position-relative ">
-                      <div class="head head-move">
-                        <div class="part"></div>
-                      </div>
-                      <div class="neck neck-move">
-                        <div class="part"></div>
-                      </div>
-                      <div class="shoulders d-flex justify-content-between shoulders-move">
-                        <div class="h-part"></div>
-                        <div class="divader"></div>
-                        <div class="h-part"></div>
-                        <div class="divader"></div>
-                        <div class="h-part"></div>
-                      </div>
-                    </div>
-                    <div class="handsandbody d-flex align-items-center justify-content-between position-relative">
-                      <div class="hand right-move">
-                        <div class="col">
-                          <div class="part"></div>
-                          <div class="part"></div>
-                          <div class="part"></div>
-                          <div class="part"></div>
+               <div class="col-12">
+               <div class="wrapper-man wrapper-man-move d-flex justify-content-start">
+                 <div
+                   class="man man-move d-flex flex-column justify-content-center position-relative mb-4"
+                 >
+                   <div
+                     class="headandshoulders d-flex flex-column align-items-center position-relative"
+                   >
+                     <div class="head head-move">
+                       <div class="part"></div>
+                     </div>
+                     <div class="neck neck-move">
+                       <div class="part"></div>
+                       
+                     </div>
+                     <div
+                       class="shoulders d-flex justify-content-between shoulders-move"
+                     >
+                       <div class="h-part"></div>
+                       <div class="divader"></div>
+                       <div class="h-part"></div>
+                       <div class="divader"></div>
+                       <div class="h-part"></div>
+                       <div class="divader"></div>
+                       <div class="h-part"></div>
+                     </div>
+                   </div>
+                   <div
+                     class="handsandbody d-flex align-items-center justify-content-between position-relative"
+                   >
+                     <div class="hand hand-right hand-right-move">
+                       <div class="col">
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                       </div>
+                       <div class="col elbow-right elbow-move">
+                         <div class="r-part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="col">
                            <div class="part"></div>
-                        </div>
-                        <div class="col elbow-left-move">
-                          <div class="r-part"></div>
-                          <div class="part"></div> 
-                          <div class="part"></div>
-                          <div class="part"></div>
-                          <div class="col">
-                            <div class="part"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="divader"></div>
-                      <div class="manbody body-move">
-                        <div class="col  chest-move">
-                          <div class="d-flex justify-content-between shoulders-move">
-                            <div class="h-part"></div>
-                            <div class="divader"></div>
-                            <div class="h-part"></div>
-                          </div>
-                          <div class="part ms-2"></div>
-                          <div class="part ms-2"></div>
-                          <div class="part ms-2"></div>
-                        </div>
-                        <div class="col stomach-move">
-                          <div class="part ms-2"></div>
-                          <div class="part ms-2"></div>
-                          <div class="part ms-2"></div>
-                        </div>
-                        <div class="hips d-flex justify-content-between hips-move">
-                          <div class="h-part"></div>
-                          <div class="divader"></div>
-                          <div class="h-part"></div>
-                        </div>
-                      </div>
-                      <div class="divader"></div>
-                      <div class="hand left-move">
-                        <div class="col">
-                          <div class="part"></div>
-                          <div class="part"></div>
-                          <div class="part"></div>
-                          <div class="part"></div>
-                          <div class="part"></div>
-                        </div>
-                        <div class="col elbow-right-move">
-                          <div class="r-part"></div>
-                          <div class="part"></div>
-                          <div class="part"></div>
-                          <div class="part"></div>
-                          <div class="col">
-                            <div class="part"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            
-                    <div class="legs d-flex justify-content-around position-relative">
-                      <div class="right-leg leg left-move ms-1">
-                          <div class="col">
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                          </div>
-                          <div class="r-part me-1"></div>
-                          <div class="col knee-right-move">
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                          <div class="d-block foot-left-move">
-                            <div class="h-part" style="width: 150%;"></div>
-                          </div>
-                        </div>
-                        
-                      </div>
-                      <div class="left-leg leg right-move ms-1">
-                          <div class="col">
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                          </div>
-                          <div class="r-part me-1"></div>
-                          <div class="col knee-left-move">
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                            <div class="part"></div>
-                          <div class="d-block foot-right-move">
-                            <div class="h-part" style="width: 150%;"></div>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                   
-                  </div>
-                  
-                </div>
-        </div>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="">
+                       <img class="bag bag-move" src="img/bag.png" alt="" />
+                     </div>
+                     <div class="manbody body-move">
+                       <div class="col chest-move">
+                         <div class="d-flex justify-content-between shoulders-move">
+                           <div class="h-part"></div>
+                           <div class="divader"></div>
+                           <div class="h-part"></div>
+                           <div class="divader"></div>
+                           <div class="h-part"></div>
+                         </div>
+                         <div class="part ms-2"></div>
+                         <div class="part ms-2"></div>
+                         <div class="part ms-2"></div>
+                       </div>
+                       <div class="col stomach-move">
+                         <div class="part ms-2"></div>
+                         <div class="part ms-2"></div>
+                         <div class="part ms-2"></div>
+                       </div>
+                       <div class="hips d-flex justify-content-between hips-move">
+                         <div class="h-part"></div>
+                         <div class="divader"></div>
+                         <div class="h-part"></div>
+                       </div>
+                     </div>
+                     <div class="divader"></div>
+                     <div class="hand left-move">
+                       <div class="col">
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                       </div>
+                       <div class="col elbow-right-move">
+                         <div class="r-part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="col">
+                           <div class="part"></div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+         
+                   <div class="legs d-flex justify-content-around position-relative">
+                     <div class="right-leg leg left-move ms-1">
+                       <div class="col">
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                       </div>
+                       <div class="r-part me-1"></div>
+                       <div class="col knee-right-move">
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="d-block foot-left-move">
+                           <div class="h-part" style="width: 150%"></div>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="left-leg leg right-move ms-1">
+                       <div class="col">
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                       </div>
+                       <div class="r-part me-1"></div>
+                       <div class="col knee-left-move">
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="part"></div>
+                         <div class="d-block foot-right-move">
+                           <div class="h-part" style="width: 150%"></div>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
 
      <div class="tour-card-map col-12 p-3 p-md-4 p-lg-5">
         <div class="tour-card-info-block mb-5 col-slide col-slide-right">
@@ -873,7 +886,6 @@ function showTourCard(target) {
 
       </div>`;
 
-
       tourListItems.forEach((tourListItem) => {
         tourListItem.classList.remove("shown");
       });
@@ -907,7 +919,7 @@ function showTourCard(target) {
 toursListSection.addEventListener("click", (event) => {
   let target = event.target;
   showTourCard(target);
-  toursFiltersList.classList.add('hide');
+  toursFiltersList.classList.add("hide");
 });
 
 //COUNTRIES
