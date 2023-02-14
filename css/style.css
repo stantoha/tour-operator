@@ -279,10 +279,9 @@ header {
 }
 .block-title {
   letter-spacing: 1px;
-  box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 1px 2px 2px rgba(255, 255, 255, 1);
   text-shadow: 0px 0px 1px rgba(255, 255, 255, 1);
   background-color: rgba(0, 0, 0, 0.1);
-  margin-top: 7px;
   text-transform: uppercase;
 }
 /* ANIMATION-SLIDE */
@@ -460,7 +459,7 @@ header {
 /* ACHIEVMENTS-SECTION */
 .achievment {
   height: 310px;
-  border-radius: 5px/5px;
+  /*  border-radius: 5px/5px; */
   box-shadow: 1px 0px 5px 4px rgba(255, 255, 255, 1),
     0px 0px 240px 1px rgba(255, 255, 255, 1), 0px 1px 0px 7px rgba(0, 0, 0, 1);
 }
@@ -758,7 +757,6 @@ p.tour-card-title {
   background-color: rgba(255, 255, 255, 1);
   margin: 30px auto 30px auto;
   width: 100%;
-  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.8);
 }
 
 .modal-login,
@@ -912,19 +910,24 @@ a.footer-logo-link {
   transform: scale(0.7);
 }
 .part {
-  width: 4px;
+  width: 8px;
   height: 8px;
-  border-radius: 5px/5px;
+  /*  border-radius: 5px/5px; */
   box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
   background-color: rgba(255, 255, 255, 1);
 }
 
 .h-part {
   width: 8px;
-  height: 4px;
-  border-radius: 5px/5px;
+  height: 6px;
+  /*  border-radius: 5px/5px; */
   box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
   background-color: rgba(255, 255, 255, 1);
+}
+
+.hips .h-part {
+  width: 8px;
+  height: 6px;
 }
 .r-part {
   width: 6px;
@@ -955,7 +958,7 @@ a.footer-logo-link {
   transform: translate(-150px, 35px) rotate(10deg);
 }
 .bag-move {
-  animation: bag-move 2s linear infinite forwards;
+  animation: bag-move 2s linear 500ms infinite forwards;
   transform-origin: top;
 }
 @keyframes bag-move {
