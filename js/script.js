@@ -378,10 +378,9 @@ function showTourCard(target) {
         let tourCardFlag = document.createElement("div");
         tourCardFlag.classList.add(
           "tour-card-flag",
-          "m-1",
-          "border",
-          "border-1",
-          "shadow-lg"
+          "position-relative",
+          "shadow-lg",
+          "mx-auto"
         );
         tourCardFlag.innerHTML = `<a class="tour-card-flag-link" href="#">
         <img src=${tourFlags[n].currentSrc} class="p-1"></a>`;
@@ -421,15 +420,16 @@ function showTourCard(target) {
             <div class="card-img-overlay d-flex flex-column align-items-center p-1">
               <p class="tour-card-title text-center text-capitalize mt-5">${tourListLink.dataset.tourname}</p> 
             </div>
-          </div>
-      </div>
-
-      <div class="divider"></div>
-      <div class="col-12 col-md-8 col-lg-8 mx-lg-auto mx-md-auto">
+            <div class="col-12 col-md-8 col-lg-8 mx-lg-auto mx-md-auto">
                  <div class="tour-card-flags d-flex justify-content-evenly align-items-center">
                   ${tourCardFlags.innerHTML}
                  </div>
                </div>
+          </div>
+      </div>
+
+      <div class="divider"></div>
+      
 
                <div class="col-12">
                <div class="wrapper-man wrapper-man-move d-flex justify-content-start">
@@ -579,51 +579,46 @@ function showTourCard(target) {
                  </div>
                </div>
              </div>
-
-     <div class="tour-card-map col-12 p-3 p-md-4 p-lg-5">
-        <div class="tour-card-info-block mb-5 col-slide col-slide-right">
+         <div class="divider"></div>
+         
+      <div class="tour-card-map col-12 col-md-6 col-lg-6 p-3 p-md-4 p-lg-5">
+        <div class="tour-card-info-block  mb-5 col-slide col-slide-right   border-bottom border-1">
           <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
-            Route:
+            Route map
           </p>
-          <div class="info-list d-flex justify-content-center  p-1 m-0">
+         <div class="d-flex flex-column">
+         <div class="info-list d-flex justify-content-around  p-1 px-5 m-0 mx-5">
             <div class="info-item p-1">
-                <a href="#" class="fs-3 info-link  text-white text-decoration-none mx-auto">
+                <a href="#" class="fs-3 info-link fst-italic  text-white text-decoration-none mx-auto">
                   city
                 </a>
               </div>
               <div class="info-item p-1">
-                <a href="#" class="fs-3 info-link text-white text-decoration-none">
+                <a href="#" class="fs-3 info-link fst-italic text-white text-decoration-none">
                   city
                 </a>
               </div>
               <div class="info-item p-1">
-                <a href="#" class="fs-3 info-link  text-white text-decoration-none mx-auto">
+                <a href="#" class="fs-3 info-link fst-italic  text-white text-decoration-none mx-auto">
                   city
                 </a>
               </div>
               <div class="info-item p-1">
-                <a href="#" class="fs-3 info-link text-white text-decoration-none">
+                <a href="#" class="fs-3 info-link fst-italic text-white text-decoration-none">
                   city
                 </a>
               </div>
             </div>
-        </div>
-      </div>
 
-               
-      <div class="tour-card-map col-12 p-3 p-md-4 p-lg-5">
-        <div class="tour-card-info-block mb-5 col-slide col-slide-right">
-          <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
-            Route map
-          </p>
-          <div class="card-map d-flex justify-content-center align-items-center mb-3">
+          <div class="card-map d-flex justify-content-center align-items-center mb-3" style="min-width:280px;">
             <iframe   src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d5253059.749807001!2d8.70547054014988!3d49.993161012334696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x473add7c09109a57%3A0x4223c517012378e2!2z0JvRjNCy0L7Qsiwg0JvRjNCy0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA3OTAwMA!3m2!1d49.839683!2d24.029716999999998!4m5!1s0x471644c0354e18d1%3A0xb46bb6b576478abf!2zS3Jha8Ozdywg0J_QvtC70YzRiNCw!3m2!1d50.064650099999994!2d19.9449799!4m5!1s0x4709cf29101ad6a9%3A0x421b1cb4288feb0!2zRHJlc2Rlbiwg0JPQtdGA0LzQsNC90LjRjw!3m2!1d51.0504088!2d13.737262099999999!4m5!1s0x47e974334a533b09%3A0x40a5fb99a3b45c0!2zUmVpbXMsINCk0YDQsNC90YbQuNGP!3m2!1d49.258328999999996!2d4.031696!4m5!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2zUGFyaXMsINCk0YDQsNC90YbQuNGP!3m2!1d48.856614!2d2.3522219!5e0!3m2!1sru!2sua!4v1661845906507!5m2!1sru!2sua"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
+         </div>
         </div>
       </div>
 
-      <div class="tour-card-short-descr col-12 p-3 p-md-4 p-lg-5">
-        <div class="tour-card-info-block mb-5 col-slide col-slide-right">
+      <div class="tour-card-short-descr col-12 col-md-6 col-lg-6 p-3 p-md-4 p-lg-5">
+        <div class="tour-card-info-block  mb-5 col-slide col-slide-right border-bottom border-1">
           <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
             Tour description
           </p>
@@ -636,8 +631,8 @@ function showTourCard(target) {
       <div class="col-12">
         <div class="container-fluid">
           <div class="row row-cols-md-2 row-cols-lg-2">
-            <div class="col p-3 p-md-4 p-lg-5">
-              <div class="tour-card-info-block mb-5 col-slide col-slide-right">
+            <div class="col-12 col-md-6 col-lg-6 p-3 p-md-4 p-lg-5">
+              <div class="tour-card-info-block  mb-5 col-slide col-slide-right border-bottom border-1">
                 <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
                 Countries visited:
                 </p>
@@ -656,8 +651,8 @@ function showTourCard(target) {
                 </div>
               </div>
             </div>
-            <div class="col p-3 p-md-4 p-lg-5">
-              <div class="tour-card-info-block mb-5 col-slide col-slide-right">
+            <div class="col-12 col-md-6 col-lg-6 p-3 p-md-4 p-lg-5">
+              <div class="tour-card-info-block  mb-5 col-slide col-slide-right border-bottom border-1">
                 <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
                   Available dates:
                 </p>
@@ -681,8 +676,8 @@ function showTourCard(target) {
       <div class="col-12">
         <div class="container-fluid">
           <div class="row row-cols-md-2 row-cols-lg-2">
-            <div class="col p-3 p-md-4 p-lg-5">
-              <div class="tour-card-info-block mb-5 col-slide col-slide-right">
+            <div class="col-12 col-md-6 col-lg-6 p-3 p-md-4 p-lg-5">
+              <div class="tour-card-info-block  mb-5 col-slide col-slide-right border-bottom border-1">
                 <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
                   Duration:
                 </p>
@@ -695,8 +690,8 @@ function showTourCard(target) {
                 </div>
               </div>
             </div>
-            <div class="col p-3 p-md-4 p-lg-5">
-              <div class="tour-card-info-block mb-5 col-slide col-slide-right">
+            <div class="col-12 col-md-6 col-lg-6 p-3 p-md-4 p-lg-5">
+              <div class="tour-card-info-block  mb-5 col-slide col-slide-right border-bottom border-1">
                 <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
                   Tour type:
                 </p>
@@ -719,21 +714,21 @@ function showTourCard(target) {
      
      <div class="divider"></div>
 
-      <div class="tour-card-program col-12 ">
+      <div class="tour-card-program col-12 border-bottom border-1">
         <div class="tour-program-title bg-info my-3  text-uppercase">
         <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
         Tour program
           </p>
         </div>
         
-        <div class="tour-card-program-days px-lg-5 py-2">
+        <div class="tour-card-program-days px-lg-5 py-2 border-bottom border-1">
           <div class="accordion accordion-flush" id="tour-program-accordion">
          
           </div>
         </div>
       </div>
       <div class="divider"></div>
-      <div class="tour-card-included col-12 col-md-6 col-lg-4 my-3 py-3 text-white">
+      <div class="tour-card-included col-12 col-md-6 col-lg-4 my-3 py-3 text-white border-bottom border-1">
       <div class="included-title bg-success my-3  text-uppercase">
         <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
          Included:
@@ -759,7 +754,7 @@ function showTourCard(target) {
         </ul>
       </div>
    
-      <div class="tour-card-notincluded col-12 col-md-6 col-lg-4 my-3 py-3 text-white">
+      <div class="tour-card-notincluded col-12 col-md-6 col-lg-4 my-3 py-3 text-white border-bottom border-1">
       <div class="not-included-title bg-danger my-3  text-uppercase">
         <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
         Not included:
@@ -784,7 +779,7 @@ function showTourCard(target) {
         </ul>
       </div>
    
-      <div class="tour-card-additional col-12 col-md-6 col-lg-4  my-3 py-3 text-white m-auto">
+      <div class="tour-card-additional col-12 col-md-6 col-lg-4  my-3 py-3 text-white m-auto border-bottom border-1">
       <div class="additional-info-title bg-warning my-3  text-uppercase">
         <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
            Additional info
@@ -801,57 +796,115 @@ function showTourCard(target) {
         </ul>
       </div>
       <div class="divider"></div>
-      <div class="tour-card-reviews col-12">
-        <div class="tour-card-reviews-list card-group">
-          <div class="tour-card-review-item col col-md-6 col-lg-4 card p-2 bg-dark">
+
+     
+      <div class="tour-card-reviews col-12 border-bottom border-1">
+      <p class="h3 block-title mb-3 p-2 pt-3 text-center border-bottom border-1">
+           Reviews:
+        </p>
+        <div class="tour-card-reviews-list row  my-5">
+        <div class=" line">                     
+        <div class="line__menu d-flex align-items-center">
+
+              <div class="tour-card-review-item col col-md-6 col-lg-4 card p-2 bg-dark" style="width:300px;">
+                <img src="..." class="card-img-top" alt="..." height="150">
+              <div class="tour-card-review-content card-body">
+                <p class="tour-card-review-tour card-title">Review tour name
+                  <small class="text-muted">
+                    <time datetime="2001-05-15 19:00">15 May</time>
+                  </small>
+                </p>
+                <p class="tour-card-review-text card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="tour-card-review-footer card-footer d-flex gap-5">
+                <p class="tour-card-review-client card-title">Clients name</p>
+                <small class="text-muted">Clients age</small>
+              </div>
+            </div>
+            <div class="tour-card-review-item col col-md-6 col-lg-4 card p-2 bg-dark" style="width:300px;">
             <img src="..." class="card-img-top" alt="..." height="150">
-            <div class="tour-card-review-content card-body">
-              <p class="tour-card-review-tour card-title">Review tour name
-                <small class="text-muted">
-                  <time datetime="2001-05-15 19:00">15 May</time>
-                </small>
-              </p>
-              <p class="tour-card-review-text card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="tour-card-review-footer card-footer d-flex gap-5">
-              <p class="tour-card-review-client card-title">Clients name</p>
-              <small class="text-muted">Clients age</small>
-            </div>
+          <div class="tour-card-review-content card-body">
+            <p class="tour-card-review-tour card-title">Review tour name
+              <small class="text-muted">
+                <time datetime="2001-05-15 19:00">15 May</time>
+              </small>
+            </p>
+            <p class="tour-card-review-text card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
-        
-          <div class="tour-card-review-item col col-md-6 col-lg-4 card p-2 bg-dark">
-            <img src="..." class="card-img-top" alt="..." height="150">
-            <div class="tour-card-review-content card-body">
-              <p class="tour-card-review-tour card-title">Review tour name
-                <small class="text-muted">
-                  <time datetime="2001-05-15 19:00">15 May</time>
-                </small>
-              </p>
-              <p class="tour-card-review-text card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="tour-card-review-footer card-footer d-flex gap-5">
-              <p class="tour-card-review-client card-title">Clients name</p>
-              <small class="text-muted">Clients age</small>
-            </div>
-          </div>
-      
-          <div class="tour-card-review-item col col-md-6 col-lg-4 card p-2 bg-dark">
-            <img src="..." class="card-img-top" alt="..." height="150">
-            <div class="tour-card-review-content card-body">
-              <p class="tour-card-review-tour card-title">Review tour name
-                <small class="text-muted">
-                  <time datetime="2001-05-15 19:00">15 May</time>
-                </small>
-              </p>
-              <p class="tour-card-review-text card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="tour-card-review-footer card-footer d-flex gap-5">
-              <p class="tour-card-review-client card-title">Clients name</p>
-              <small class="text-muted">Clients age</small>
-            </div>
+          <div class="tour-card-review-footer card-footer d-flex gap-5">
+            <p class="tour-card-review-client card-title">Clients name</p>
+            <small class="text-muted">Clients age</small>
           </div>
         </div>
+        <div class="tour-card-review-item col col-md-6 col-lg-4 card p-2 bg-dark" style="width:300px;">
+                <img src="..." class="card-img-top" alt="..." height="150">
+              <div class="tour-card-review-content card-body">
+                <p class="tour-card-review-tour card-title">Review tour name
+                  <small class="text-muted">
+                    <time datetime="2001-05-15 19:00">15 May</time>
+                  </small>
+                </p>
+                <p class="tour-card-review-text card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="tour-card-review-footer card-footer d-flex gap-5">
+                <p class="tour-card-review-client card-title">Clients name</p>
+                <small class="text-muted">Clients age</small>
+              </div>
+            </div>
+            <div class="tour-card-review-item col col-md-6 col-lg-4 card p-2 bg-dark" style="width:300px;">
+                <img src="..." class="card-img-top" alt="..." height="150">
+              <div class="tour-card-review-content card-body">
+                <p class="tour-card-review-tour card-title">Review tour name
+                  <small class="text-muted">
+                    <time datetime="2001-05-15 19:00">15 May</time>
+                  </small>
+                </p>
+                <p class="tour-card-review-text card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+              <div class="tour-card-review-footer card-footer d-flex gap-5">
+                <p class="tour-card-review-client card-title">Clients name</p>
+                <small class="text-muted">Clients age</small>
+              </div>
+            </div>
+            <div class="tour-card-review-item col col-md-6 col-lg-4 card p-2 bg-dark" style="width:300px;">
+            <img src="..." class="card-img-top" alt="..." height="150">
+          <div class="tour-card-review-content card-body">
+            <p class="tour-card-review-tour card-title">Review tour name
+              <small class="text-muted">
+                <time datetime="2001-05-15 19:00">15 May</time>
+              </small>
+            </p>
+            <p class="tour-card-review-text card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <div class="tour-card-review-footer card-footer d-flex gap-5">
+            <p class="tour-card-review-client card-title">Clients name</p>
+            <small class="text-muted">Clients age</small>
+          </div>
+        </div>
+
+        <div class="tour-card-review-item col col-md-6 col-lg-4 card p-2 bg-dark" style="width:300px;">
+        <img src="..." class="card-img-top" alt="..." height="150">
+      <div class="tour-card-review-content card-body">
+        <p class="tour-card-review-tour card-title">Review tour name
+          <small class="text-muted">
+            <time datetime="2001-05-15 19:00">15 May</time>
+          </small>
+        </p>
+        <p class="tour-card-review-text card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
       </div>
+      <div class="tour-card-review-footer card-footer d-flex gap-5">
+        <p class="tour-card-review-client card-title">Clients name</p>
+        <small class="text-muted">Clients age</small>
+      </div>
+    </div>
+
+        </div>
+      </div>
+        </div>
+      </div>
+
+
+      
       <div class="divider"></div>
       <div class="tour-card-booking-section col-12  my-3 py-3 text-white">
         <div class="row">
@@ -891,7 +944,7 @@ function showTourCard(target) {
         tourListItem.classList.remove("shown");
       });
       toursListSection.prepend(tourCard);
-      let infoBlocks = tourCard.querySelectorAll(".tour-card-info-block");
+      let infoBlocks = tourCard.querySelectorAll(".tour-card-info-block ");
       infoBlocks.forEach((item, j) => {
         setTimeout(showSlideItem(item), 2000);
       });
