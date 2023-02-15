@@ -569,7 +569,7 @@ p.achievment-text {
 
 .tours-list .tours-list-item .card .tours-list-link,
 .tours-list .tours-list-item .card {
-  box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 1);
 }
 .tours-list-item {
   width: 260px;
@@ -581,10 +581,11 @@ p.achievment-text {
 
 .tours-list-link {
   letter-spacing: 2px;
+  font-family: "Cabin", sans-serif;
 }
 
 .tours-list-item .card-text {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Cabin", sans-serif;
   background-color: rgba(255, 255, 255, 0.1);
   word-wrap: break-word;
   text-shadow: 1px 0px 1px rgba(0, 0, 0, 1);
@@ -594,7 +595,9 @@ p.achievment-text {
   font-size: 3.5em;
   letter-spacing: 1px;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
-  font-family: "Bubblegum Sans", cursive;
+  /*   font-family: "Bubblegum Sans", cursive; */
+  /* font-family: "Cabin", sans-serif; */
+  font-family: "Roboto Condensed", sans-serif;
 }
 .tours-list-item .card {
   background-color: rgba(255, 255, 255, 0.5);
