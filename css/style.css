@@ -626,7 +626,6 @@ p.achievment-text {
   }
   .tours-list-container {
     position: absolute;
-    /*    width: 100%; */
     overflow-x: scroll;
   }
   .tour-list {
@@ -664,14 +663,43 @@ p.tour-card-title {
 }
 
 .tour-card-short-descr .card-text {
-  columns: 2;
+  /* columns: 2; */
 }
-
+.tour-card-reviews-list {
+  min-width: 200%;
+}
 .tour-card-flag img {
   width: 50px;
   height: 50px;
 }
-
+.tour-card-reviews-list {
+  min-width: 375px;
+  height: 350px;
+  background: #182840;
+  position: relative;
+  order: 1;
+  z-index: 20;
+}
+.tour-card-review-item {
+  box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 1);
+}
+.line {
+  position: absolute;
+  /*  width: 237px; */
+  height: 350px;
+  left: 0px;
+  top: 0px;
+  overflow-x: scroll;
+}
+.line__menu {
+  padding: 0px 32px;
+  gap: 40px;
+  position: absolute;
+  min-width: 1134px;
+  height: 350px;
+  left: 0px;
+  top: 0px;
+}
 @media screen and (min-width: 768px) {
   p.tour-card-title {
     font-size: 8em;
@@ -755,8 +783,9 @@ p.tour-card-title {
   position: relative;
   height: 5px;
   background-color: rgba(255, 255, 255, 1);
-  margin: 30px auto 30px auto;
-  width: 100%;
+  margin: 50px auto 50px auto;
+  width: 50%;
+  box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 1);
 }
 
 .modal-login,
@@ -904,7 +933,7 @@ a.footer-logo-link {
    box-shadow: 0px 0px 3px rgba(255,255,255,1);
 } */
 .wrapper-man {
-  /* height: 140px; */
+  height: 250px;
 }
 .wrapper-man .man {
   transform: scale(0.7);
@@ -955,27 +984,27 @@ a.footer-logo-link {
 
 .bag {
   position: absolute;
-  transform: translate(-150px, 35px) rotate(10deg);
+  transform: translate(-150px, 55px) rotate(8deg);
 }
 .bag-move {
-  animation: bag-move 2s linear 500ms infinite forwards;
+  animation: bag-move 1.4s linear 350ms infinite forwards;
   transform-origin: top;
 }
 @keyframes bag-move {
   0% {
-    transform: translate(-150px, 35px) rotate(10deg);
+    transform: translate(-150px, 55px) rotate(8deg);
   }
   20% {
-    transform: translate(-160px, 35px) rotate(12deg);
+    transform: translate(-160px, 55px) rotate(10deg);
   }
   50% {
-    transform: translate(-150px, 35px) rotate(10deg);
+    transform: translate(-150px, 55px) rotate(8deg);
   }
   70% {
-    transform: translate(-160px, 35px) rotate(12deg);
+    transform: translate(-160px, 55px) rotate(10deg);
   }
   100% {
-    transform: translate(-150px, 35px) rotate(10deg);
+    transform: translate(-150px, 55px) rotate(8deg);
   }
 }
 .hand.left-move .part,
@@ -1010,32 +1039,32 @@ a.footer-logo-link {
 }
 @media screen and (min-width: 768px) {
   .wrapper-man-move {
-    animation: wrapper-man-move 14s linear infinite forwards;
+    animation: wrapper-man-move 8s linear infinite forwards;
   }
 }
 .man-move {
-  animation: man-move 1s linear 500ms infinite forwards;
+  animation: man-move 1s linear 250ms infinite forwards;
   transform-origin: bottom;
 }
 @keyframes man-move {
   0% {
-    transform: scale(0.7) translateY(0);
+    transform: rotate(4deg) scale(0.7) translateY(0);
   }
   25% {
-    transform: scale(0.7) translateY(3px);
+    transform: rotate(4deg) scale(0.7) translateY(3px);
   }
   50% {
-    transform: scale(0.7) translateY(0);
+    transform: rotate(4deg) scale(0.7) translateY(0);
   }
   75% {
-    transform: scale(0.7) translateY(3px);
+    transform: rotate(4deg) scale(0.7) translateY(3px);
   }
   100% {
-    transform: scale(0.7) translateY(0px);
+    transform: rotate(4deg) scale(0.7) translateY(0px);
   }
 }
 .head-move {
-  animation: head-move 2s linear infinite forwards;
+  animation: head-move 1.4s linear infinite forwards;
   transform-origin: bottom;
 }
 @keyframes head-move {
@@ -1053,7 +1082,7 @@ a.footer-logo-link {
   }
 }
 .neck-move {
-  animation: neck-move 2s linear infinite forwards;
+  animation: neck-move 1.4s linear infinite forwards;
   transform-origin: bottom;
 }
 @keyframes neck-move {
@@ -1071,7 +1100,7 @@ a.footer-logo-link {
   }
 }
 .body-move {
-  animation: body-move 2s linear infinite forwards;
+  animation: body-move 1.4s linear infinite forwards;
   transform-origin: center;
 }
 @keyframes body-move {
@@ -1089,7 +1118,7 @@ a.footer-logo-link {
   }
 }
 .chest-move {
-  animation: chest-move 2s linear infinite forwards;
+  animation: chest-move 1.4s linear infinite forwards;
   transform-origin: center;
 }
 @keyframes chest-move {
@@ -1107,7 +1136,7 @@ a.footer-logo-link {
   }
 }
 .stomach-move {
-  animation: stomach-move 2s linear infinite forwards;
+  animation: stomach-move 1.4s linear infinite forwards;
   transform-origin: bottom;
 }
 @keyframes stomach-move {
@@ -1125,7 +1154,7 @@ a.footer-logo-link {
   }
 }
 .shoulders-move {
-  animation: shoulders-move 2s linear infinite forwards;
+  animation: shoulders-move 1.4s linear infinite forwards;
   transform-origin: center;
 }
 @keyframes shoulders-move {
@@ -1143,7 +1172,7 @@ a.footer-logo-link {
   }
 }
 .hips-move {
-  animation: hips-move 2s linear 1s infinite forwards;
+  animation: hips-move 1.4s linear 0.7s infinite forwards;
   transform-origin: center;
 }
 @keyframes hips-move {
@@ -1165,7 +1194,7 @@ a.footer-logo-link {
   transform-origin: top;
 }
 .hand-right-move {
-  animation: hand-right-move 2s linear infinite forwards;
+  animation: hand-right-move 1.4s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes hand-right-move {
@@ -1191,7 +1220,7 @@ a.footer-logo-link {
   transform-origin: top;
 }
 .elbow-move {
-  animation: elbow-move 2s linear infinite forwards;
+  animation: elbow-move 1.4s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes elbow-move {
@@ -1212,7 +1241,7 @@ a.footer-logo-link {
   }
 }
 .left-move {
-  animation: left-move 2s linear infinite forwards;
+  animation: left-move 1.4s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes left-move {
@@ -1230,7 +1259,7 @@ a.footer-logo-link {
   }
 }
 .right-move {
-  animation: right-move 2s linear infinite forwards;
+  animation: right-move 1.4s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes right-move {
@@ -1248,7 +1277,7 @@ a.footer-logo-link {
   }
 }
 .elbow-left-move {
-  animation: elbow-left-move 2s linear infinite forwards;
+  animation: elbow-left-move 1.4s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes elbow-left-move {
@@ -1260,7 +1289,7 @@ a.footer-logo-link {
   }
 }
 .elbow-right-move {
-  animation: elbow-right-move 2s linear infinite forwards;
+  animation: elbow-right-move 1.4s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes elbow-right-move {
@@ -1272,7 +1301,7 @@ a.footer-logo-link {
   }
 }
 .knee-left-move {
-  animation: knee-left-move 2s 1s linear infinite forwards;
+  animation: knee-left-move 1.4s 0.7s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes knee-left-move {
@@ -1284,7 +1313,7 @@ a.footer-logo-link {
   }
 }
 .knee-right-move {
-  animation: knee-right-move 2s linear infinite forwards;
+  animation: knee-right-move 1.4s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes knee-right-move {
@@ -1296,7 +1325,7 @@ a.footer-logo-link {
   }
 }
 .foot-left-move {
-  animation: foot-left-move 2s linear infinite forwards;
+  animation: foot-left-move 1.4s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes foot-left-move {
@@ -1308,7 +1337,7 @@ a.footer-logo-link {
   }
 }
 .foot-right-move {
-  animation: foot-right-move 2s linear infinite forwards;
+  animation: foot-right-move 1.4s linear infinite forwards;
   transform-origin: top;
 }
 @keyframes foot-right-move {
